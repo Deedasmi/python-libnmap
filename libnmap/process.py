@@ -98,7 +98,7 @@ class NmapProcess(Thread):
         else:
             nmap_binary_name = "nmap"
             self.__nmap_binary = self._whereis(nmap_binary_name)
-        self.__nmap_fixed_options = "-oX - -vvv --stats-every 1s"
+        self.__nmap_fixed_options = "-oX - -vvv --stats-every 3s"
 
         if self.__nmap_binary is None:
             raise EnvironmentError(1, "nmap is not installed or could "
