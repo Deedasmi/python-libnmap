@@ -203,7 +203,7 @@ class NmapProcess(Thread):
                                       "could not be found in system path: "
                                       "cannot run nmap with sudo")
 
-        self.__sudo_run = "{0} -u {1}".format(sudo_path, sudo_user)
+        self.__sudo_run = "{0}".format(sudo_path, sudo_user)
         rc = self.run()
         self.__sudo_run = ""
 
@@ -236,7 +236,7 @@ class NmapProcess(Thread):
                                       "could not be found in system path: "
                                       "cannot run nmap with sudo")
 
-        self.__sudo_run = "{0} -u {1}".format(sudo_path, sudo_user)
+        self.__sudo_run = "{0}".format(sudo_path, sudo_user)
         super(NmapProcess, self).start()
 
     def run(self):
